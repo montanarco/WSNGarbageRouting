@@ -1,0 +1,52 @@
+
+.dashboard-body {
+    background: url('../../../../assets/layout/images/dashboard.jpg')  /*no-repeat #f7f7f7*/;
+    background-size: 100% auto;
+   /* Full height */
+   height: 800px; 
+   
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+}
+.content {
+    
+    position: absolute;
+    left: 26%;
+    top: 55%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+ /* Desktops and laptops ----------- */
+ @media only screen  and (min-width : 1224px) {
+    /* Styles */
+    .dashboard-body {        
+        height: 722px;     
+     }
+    }
+    
+    /* Large screens ----------- */
+    @media only screen  and (min-width : 1824px) {
+        .dashboard-body {        
+            height: 1160px;     
+         }
+    }
+    @keyframes ui-progress-spinner-color {
+        100%,
+        0% {
+            stroke: #d62d20;
+        }
+        40% {
+            stroke: #0057e7;
+        }
+        66% {
+            stroke: #008744;
+        }
+        80%,
+        90% {
+            stroke: #ffa700;
+        }
+    }

@@ -1,0 +1,34 @@
+body, html {
+    height: 100%;
+}
+
+
+.login-body {
+    background: url('../../../assets/layout/images/login/login2.jpg')  /*no-repeat #f7f7f7*/;
+    background-size: 100% auto;
+   /* Full height */
+   height: 100%; 
+
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+   
+    /* Desktops and laptops ----------- */
+    @media only screen  and (min-width : 1224px) {
+    /* Styles */
+    .login-body {        
+        height: 900px;     
+     }
+    }
+    
+    /* Large screens ----------- */
+    @media only screen  and (min-width : 1824px) {
+        .login-body {        
+            height: 1160px;     
+         }
+    }
+    
+    
+    

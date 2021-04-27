@@ -1,0 +1,51 @@
+<!-- 3. Display the application -->
+<p-growl [value]="customMessage.msgs" sticky="sticky"></p-growl>
+<div class="ui-g-12 login-body">
+  <form id="Login" [formGroup]="registerForm" (submit)=loginUser($event)>
+
+    <div class="card login-panel ui-fluid">
+      <div class="ui-g">
+        <div class="ui-g-12">                
+                <img src="assets/Logos_clientes/logo.png" width="64" class="image">
+        </div>
+        <div class="ui-g-12">
+          <span class="md-inputfield">
+            <input type="text" formControlName="user" (blur)="onBlurMethod($event)" class=" form-control" [ngClass]="{ 'ng-dirty ng-invalid': submitted && f.user.errors }"
+              class="ui-inputtext ui-corner-all ui-state-default ui-widget" />
+            <label>User</label>
+            <div *ngIf="submitted && f.user.errors">
+              <p-message *ngIf="f.user.errors.required" severity="error" text="User is required"></p-message>
+            </div>
+          </span>
+
+        </div>
+        <div class="ui-g-12">
+          <span class="md-inputfield">
+            <input type="password" formControlName="password" (blur)="onBlurMethod($event)" class="form-control" [ngClass]="{ 'ng-dirty ng-invalid':
+            submitted && f.password.errors }" class="ui-inputtext ui-corner-all ui-state-default ui-widget" />
+            <label>Password</label>
+            <div *ngIf="submitted && f.password.errors">
+              <p-message *ngIf="f.password.errors.required" severity="error" text="password is required"></p-message>
+              <p-message *ngIf="f.password.errors.minlength" severity="error" text="at least 6 characteres"></p-message>
+            </div>
+          </span>
+        </div>
+        <div class="ui-g-12">
+          <button type="submit" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left">
+            <span class="ui-button-icon-left ui-c fa fa-fw ui-icon-person"></span>
+            <span class="ui-button-text ui-c">Login</span>
+          </button>
+
+        </div>
+        <div class="ui-g-12">
+          <div *ngIf="isLoginError">
+            <p-message severity="error" text="Incorrect user or password"></p-message>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </form>
+</div>
